@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#FF6B9D" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="Kawai Sakura" />
+    <title>Kawai Sakura</title>
+    
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCOUQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzIxODVCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NiwyNTYpIj4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MikgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIHRyYW5zbGF0ZSgwLC03OCkiLz4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMjE2KSB0cmFuc2xhdGUoMCwtNzgpIi8+CiAgICA8ZWxsaXBzZSByeD0iNDIiIHJ5PSI3NSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOTUiIHRyYW5zZm9ybT0icm90YXRlKDI4OCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGNpcmNsZSByPSIzMCIgZmlsbD0iI0ZGQjdDNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSItMTIsLTE4IC0xMiwxOCAyMiwwIiBmaWxsPSIjQzIxODVCIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+Cjwvc3ZnPg==" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCOUQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzIxODVCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NiwyNTYpIj4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MikgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIHRyYW5zbGF0ZSgwLC03OCkiLz4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMjE2KSB0cmFuc2xhdGUoMCwtNzgpIi8+CiAgICA8ZWxsaXBzZSByeD0iNDIiIHJ5PSI3NSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOTUiIHRyYW5zZm9ybT0icm90YXRlKDI4OCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGNpcmNsZSByPSIzMCIgZmlsbD0iI0ZGQjdDNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSItMTIsLTE4IC0xMiwxOCAyMiwwIiBmaWxsPSIjQzIxODVCIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+Cjwvc3ZnPg==" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0A000F',
+              surface: '#130018',
+              surfaceHighlight: '#2A0038',
+              primary: '#FFFFFF',
+              secondary: '#D4A0BA',
+              accent: 'rgb(var(--theme-color-rgb) / <alpha-value>)',
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'],
+              serif: ['Noto Serif JP', 'serif'],
+            },
+            animation: {
+                'spin-slow': 'spin 12s linear infinite',
+                'marquee': 'marquee 15s linear infinite',
+            },
+            keyframes: {
+                'marquee': {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-100%)' }
+                }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --theme-color: #FF6B9D;
+        --theme-color-rgb: 255 107 157;
+        --theme-pink-light: #FFB7C5;
+        --theme-pink-deep: #C2185B;
+      }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background-color: rgba(255,107,157,0.3); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background-color: rgba(255,107,157,0.6); }
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+        background-color: #0A000F;
+        color: #ffffff;
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
+        user-select: none;
+        -webkit-user-select: none;
+        overflow: hidden;
+      }
+      
+      input, textarea {
+        user-select: text;
+        -webkit-user-select: text;
+      }
+
+      .transition-colors-fast {
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      
+      input[type=range] { -webkit-appearance: none; background: transparent; }
+      input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; }
+      input[type=range]:focus { outline: none; }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+      }
+
+      /* ===== SAKURA LOADING SCREEN ===== */
+      #sakura-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: linear-gradient(160deg, #0A000F 0%, #1E0030 50%, #0A000F 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: opacity 1s ease, transform 1s ease;
+      }
+      #sakura-loading.hide {
+        opacity: 0;
+        transform: scale(1.04);
+        pointer-events: none;
+      }
+      .loading-logo-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        z-index: 2;
+        animation: sakuraLogoIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+      @keyframes sakuraLogoIn {
+        from { opacity: 0; transform: scale(0.5) translateY(30px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .loading-icon {
+        width: 100px;
+        height: 100px;
+        animation: iconPulse 2.2s ease-in-out infinite;
+        filter: drop-shadow(0 0 28px rgba(255,107,157,0.7));
+      }
+      @keyframes iconPulse {
+        0%, 100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 28px rgba(255,107,157,0.7)); }
+        50%       { transform: scale(1.1) rotate(5deg); filter: drop-shadow(0 0 42px rgba(255,107,157,1)); }
+      }
+      .loading-title {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 4px;
+        text-shadow: 0 0 40px rgba(255,107,157,0.6);
+      }
+      .loading-subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 12px;
+        color: #FF6B9D;
+        letter-spacing: 7px;
+        margin-top: -14px;
+        opacity: 0.9;
+      }
+      .loading-dots { display: flex; gap: 9px; margin-top: 6px; }
+      .loading-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: #FF6B9D;
+        animation: dotBlink 1.4s ease-in-out infinite;
+      }
+      .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+      .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes dotBlink {
+        0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+        40%            { opacity: 1;   transform: scale(1.3); }
+      }
+      .sakura-petal {
+        position: absolute;
+        top: -50px;
+        opacity: 0;
+        animation: petalDrop linear infinite;
+        pointer-events: none;
+      }
+      @keyframes petalDrop {
+        0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+        8%   { opacity: 0.85; }
+        85%  { opacity: 0.6; }
+        100% { transform: translateY(115vh) translateX(var(--drift,0px)) rotate(600deg); opacity: 0; }
+      }
+      @keyframes petalBurst {
+        0%   { transform: translate(-50%,-50%) rotate(var(--angle,0deg)) translateY(0px); opacity: 1; }
+        100% { transform: translate(-50%,-50%) rotate(var(--angle,0deg)) translateY(-32px); opacity: 0; }
+      }
+
+      .ambient-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        animation: orbFloat 6s ease-in-out infinite;
+      }
+      @keyframes orbFloat {
+        0%, 100% { transform: translate(0,0) scale(1); }
+        50%       { transform: translate(20px,-20px) scale(1.1); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "zustand": "https://esm.sh/zustand@^5.0.9",
+    "zustand/": "https://esm.sh/zustand@^5.0.9/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.15.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- KAWAI SAKURA LOADING SCREEN -->
+    <div id="sakura-loading">
+      <div class="ambient-orb" style="width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,157,0.18),transparent);top:-150px;right:-100px;animation-delay:0s;"></div>
+      <div class="ambient-orb" style="width:350px;height:350px;background:radial-gradient(circle,rgba(194,24,91,0.14),transparent);bottom:-100px;left:-80px;animation-delay:3s;"></div>
+      <div class="ambient-orb" style="width:250px;height:250px;background:radial-gradient(circle,rgba(255,183,197,0.1),transparent);top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:1.5s;"></div>
+
+      <div id="petals-container"></div>
+
+      <div class="loading-logo-wrap">
+        <svg class="loading-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lgIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF6B9D"/>
+              <stop offset="60%" stop-color="#E91E8C"/>
+              <stop offset="100%" stop-color="#C2185B"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+          <rect width="512" height="512" rx="115" fill="url(#lgIcon)"/>
+          <g transform="translate(256,256)" filter="url(#glow)">
+            <ellipse rx="42" ry="76" fill="white" opacity="0.92" transform="rotate(0) translate(0,-80)"/>
+            <ellipse rx="42" ry="76" fill="white" opacity="0.92" transform="rotate(72) translate(0,-80)"/>
+            <ellipse rx="42" ry="76" fill="white" opacity="0.92" transform="rotate(144) translate(0,-80)"/>
+            <ellipse rx="42" ry="76" fill="white" opacity="0.92" transform="rotate(216) translate(0,-80)"/>
+            <ellipse rx="42" ry="76" fill="white" opacity="0.92" transform="rotate(288) translate(0,-80)"/>
+            <circle r="32" fill="#FFB7C5"/>
+            <polygon points="-13,-20 -13,20 24,0" fill="#8B0045" opacity="0.9"/>
+          </g>
+        </svg>
+        <div class="loading-title">Kawai Sakura</div>
+        <div class="loading-subtitle">さくら音楽</div>
+        <div class="loading-dots">
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        var container = document.getElementById('petals-container');
+        var colors = ['#FFB7C5','#FF6B9D','#FFCDD2','#F48FB1','#FCE4EC','#FF80AB'];
+        function petalSVG(c) {
+          return '<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">' +
+            '<g transform="translate(15,15)">' +
+            '<ellipse rx="6" ry="11" fill="'+c+'" opacity="0.88" transform="rotate(0) translate(0,-9)"/>' +
+            '<ellipse rx="6" ry="11" fill="'+c+'" opacity="0.88" transform="rotate(72) translate(0,-9)"/>' +
+            '<ellipse rx="6" ry="11" fill="'+c+'" opacity="0.88" transform="rotate(144) translate(0,-9)"/>' +
+            '<ellipse rx="6" ry="11" fill="'+c+'" opacity="0.88" transform="rotate(216) translate(0,-9)"/>' +
+            '<ellipse rx="6" ry="11" fill="'+c+'" opacity="0.88" transform="rotate(288) translate(0,-9)"/>' +
+            '<circle r="3.5" fill="white" opacity="0.7"/>' +
+            '</g></svg>';
+        }
+        for (var i = 0; i < 22; i++) {
+          var el = document.createElement('div');
+          el.className = 'sakura-petal';
+          var sz = 10 + Math.random() * 18;
+          var drift = (Math.random()-0.5)*140;
+          el.style.cssText = [
+            'left:'+(Math.random()*105-5)+'%',
+            'width:'+sz+'px',
+            'height:'+sz+'px',
+            'animation-delay:'+(Math.random()*6)+'s',
+            'animation-duration:'+(3+Math.random()*4)+'s',
+            '--drift:'+drift+'px'
+          ].join(';');
+          el.innerHTML = petalSVG(colors[i % colors.length]);
+          container.appendChild(el);
+        }
+        function dismiss() {
+          var el = document.getElementById('sakura-loading');
+          if (el) {
+            el.classList.add('hide');
+            setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 1100);
+          }
+        }
+        var iv = setInterval(function(){
+          var r = document.getElementById('root');
+          if (r && r.children.length > 0) { clearInterval(iv); setTimeout(dismiss, 500); }
+        }, 120);
+        setTimeout(function(){ clearInterval(iv); dismiss(); }, 4000);
+      })();
+    </script>
+
+    <div id="root"></div>
+    <script>
+      // Register Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then(function(reg) {
+              console.log('🌸 Kawai Sakura SW registered', reg.scope);
+              reg.addEventListener('updatefound', function() {
+                const newWorker = reg.installing;
+                if (newWorker) {
+                  newWorker.addEventListener('statechange', function() {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                      newWorker.postMessage({ type: 'SKIP_WAITING' });
+                    }
+                  });
+                }
+              });
+            })
+            .catch(function(err) { console.log('SW registration failed:', err); });
+        });
+      }
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

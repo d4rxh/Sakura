@@ -1,0 +1,50 @@
+{
+  "name": "Kawai Sakura",
+  "short_name": "Kawai Sakura",
+  "description": "Your pink blossom music experience \u2014 \u3055\u304f\u3089\u97f3\u697d",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "fullscreen"
+  ],
+  "background_color": "#0A000F",
+  "theme_color": "#FF6B9D",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "categories": [
+    "music",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCOUQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzIxODVCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NiwyNTYpIj4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MikgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIHRyYW5zbGF0ZSgwLC03OCkiLz4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMjE2KSB0cmFuc2xhdGUoMCwtNzgpIi8+CiAgICA8ZWxsaXBzZSByeD0iNDIiIHJ5PSI3NSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOTUiIHRyYW5zZm9ybT0icm90YXRlKDI4OCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGNpcmNsZSByPSIzMCIgZmlsbD0iI0ZGQjdDNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSItMTIsLTE4IC0xMiwxOCAyMiwwIiBmaWxsPSIjQzIxODVCIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+Cjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRjZCOUQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzIxODVCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNnKSIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NiwyNTYpIj4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSg3MikgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGVsbGlwc2Ugcng9IjQyIiByeT0iNzUiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIHRyYW5zbGF0ZSgwLC03OCkiLz4KICAgIDxlbGxpcHNlIHJ4PSI0MiIgcnk9Ijc1IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45NSIgdHJhbnNmb3JtPSJyb3RhdGUoMjE2KSB0cmFuc2xhdGUoMCwtNzgpIi8+CiAgICA8ZWxsaXBzZSByeD0iNDIiIHJ5PSI3NSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOTUiIHRyYW5zZm9ybT0icm90YXRlKDI4OCkgdHJhbnNsYXRlKDAsLTc4KSIvPgogICAgPGNpcmNsZSByPSIzMCIgZmlsbD0iI0ZGQjdDNSIvPgogICAgPHBvbHlnb24gcG9pbnRzPSItMTIsLTE4IC0xMiwxOCAyMiwwIiBmaWxsPSIjQzIxODVCIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+Cjwvc3ZnPg==",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Music",
+      "short_name": "Search",
+      "description": "Search for songs and artists",
+      "url": "/#/search",
+      "icons": []
+    },
+    {
+      "name": "Your Library",
+      "short_name": "Library",
+      "description": "View your playlists and liked songs",
+      "url": "/#/library",
+      "icons": []
+    }
+  ]
+}
